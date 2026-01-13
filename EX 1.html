@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Online Event Registration & Promotional Portal</h1>
+<p> REGISTRATION TUTORIAL</p>
+<video width="320" height="240" controls>
+  <source src="C:\Users\urk23cs5084\Pictures\samplevideo.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+
+</video>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Test Form</title>
+    <style>
+        :root { --primary: #2563eb; --bg: #f8fafc; }
+        body { font-family: system-ui, sans-serif; background: var(--bg); padding: 20px; line-height: 1.5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;
+        }
+        .radio-group { display: flex; gap: 1rem; align-items: center; }
+        .media-box { background: #e2e8f0; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border-radius: 4px; }
+        button { background: var(--primary); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+        button:hover { background: #1d4ed8; }
+        /* TC10: Responsiveness */
+        @media (max-width: 600px) {
+            .container { padding: 1rem; }
+            .radio-group { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+
+<div class="container">
+    <h2>Comprehensive Testing Form</h2>
+    
+    <!-- TC10: Media Integration -->
+    <div class="media-box">
+        <p>Interactive Media Integration (TC10)</p>
+    </div>
+
+    <form id="testForm" action="#" method="POST" enctype="multipart/form-data">
+        
+        <!-- TC05 & TC06: Basic Inputs & Email Validation -->
+        <div class="form-group">
+            <label for="name">Full Name (TC05)</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address (TC05/TC06)</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Select Date (TC05)</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <!-- TC07: Selection Inputs -->
+        <div class="form-group">
+            <label>Gender (TC07 - Radio)</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dropdown">Country (TC07 - Dropdown)</label>
+            <select id="dropdown" name="country" required>
+                <option value="">--Please choose an option--</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+            </select>
+        </div>
+
+        <!-- TC08: Textarea & File -->
+        <div class="form-group">
+            <label for="message">Comments (TC08 - Textarea)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter multi-line text..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="file">Upload Document (TC08 - File: Image/PDF)</label>
+            <input type="file" id="file" name="file" accept=".pdf,image/*">
+        </div>
+
+        <!-- TC09: Submission & Validation -->
+        <div class="form-group">
+            <button type="submit">Submit Form (TC09)</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    // TC09: Custom Validation Message Example
+    document.getElementById('testForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Form Submitted Successfully!\n(TC09 Validation Passed)');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
