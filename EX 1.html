@@ -4,15 +4,39 @@
 <title>Page Title</title>
 </head>
 <body>
-
-<h1>Online Event Registration & Promotional Portal</h1>
+<style>
+    .center-text{
+        text-align: center;
+    }
+</style>
+</body>
+<div class="center-text">
+    <h1>Online Event Registration & Promotional Portal</h1>
 <p> REGISTRATION TUTORIAL</p>
-<video width="320" height="240" controls>
-  <source src="C:\Users\urk23cs5084\Pictures\samplevideo.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
+</div>
 
-</video>
+
+<head>
+<style>
+.video-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically (if the container has a defined height) */
+    height: 10;           /* Takes up the full height of the viewport */
+    width: 10;
+}
+</style>
+</head>
+<body>
+
+<div class="video-container">
+    <video controls max-width:100% >
+        <source src="C:\Users\urk23cs5080\Downloads\canva-blue-and-white-minimalist-animated-business-advertising-video-Sbtlunculr4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+</body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,14 +65,14 @@ Your browser does not support the video tag.
 <div class="container">
     <h2>Comprehensive Testing Form</h2>
     
-    <!-- TC10: Media Integration -->
+  
     <div class="media-box">
         <p>Interactive Media Integration (TC10)</p>
     </div>
 
     <form id="testForm" action="#" method="POST" enctype="multipart/form-data">
         
-        <!-- TC05 & TC06: Basic Inputs & Email Validation -->
+       
         <div class="form-group">
             <label for="name">Full Name (TC05)</label>
             <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -64,7 +88,6 @@ Your browser does not support the video tag.
             <input type="date" id="date" name="date" required>
         </div>
 
-        <!-- TC07: Selection Inputs -->
         <div class="form-group">
             <label>Gender (TC07 - Radio)</label>
             <div class="radio-group">
@@ -83,7 +106,6 @@ Your browser does not support the video tag.
             </select>
         </div>
 
-        <!-- TC08: Textarea & File -->
         <div class="form-group">
             <label for="message">Comments (TC08 - Textarea)</label>
             <textarea id="message" name="message" rows="4" placeholder="Enter multi-line text..."></textarea>
@@ -94,7 +116,7 @@ Your browser does not support the video tag.
             <input type="file" id="file" name="file" accept=".pdf,image/*">
         </div>
 
-        <!-- TC09: Submission & Validation -->
+     
         <div class="form-group">
             <button type="submit">Submit Form (TC09)</button>
         </div>
@@ -102,7 +124,7 @@ Your browser does not support the video tag.
 </div>
 
 <script>
-    // TC09: Custom Validation Message Example
+  
     document.getElementById('testForm').addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Form Submitted Successfully!\n(TC09 Validation Passed)');
